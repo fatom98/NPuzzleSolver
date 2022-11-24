@@ -4,7 +4,7 @@ from puzzle import Puzzle
 
 def main():
     dimension: int
-    for dimension in [3, 4, 5]:
+    for dimension in [4, 5]:
         puzzle: Puzzle = Puzzle(dimension=dimension)
 
         puzzle.solve(algorithm_type=AlgorithmType.A_STAR)
