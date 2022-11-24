@@ -104,7 +104,7 @@ class Puzzle:
             print("Puzzle could not be solved :(")
             return
 
-        print("\nPuzzle is solved :)")
+        print("\nPuzzle is solved :)\n")
 
         history: list[Board] = [last_node.get_board()]
         parent = last_node

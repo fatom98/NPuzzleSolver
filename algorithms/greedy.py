@@ -9,16 +9,16 @@ class Greedy:
     @staticmethod
     def search(start: Board, target: Board):
 
-        ret: Node = None
-        iteration = 0
-        while ret is None:
-            iteration += 1
+        while True:
             ret = Greedy.solve(start, target)
 
-            if iteration % 100 == 0:
-                print("Couldn't solve the problem. Trying again.")
+            if ret is not None:
+                return ret
 
-        return ret
+            print("Couldn't solve the problem. Trying again with new boards.")
+            dimension: int = start.get_dimension()
+            start: Board = Board(dimension=dimension)
+            target: Board = Board(dimension=dimension)
 
     @staticmethod
     def solve(start: Board, target: Board):

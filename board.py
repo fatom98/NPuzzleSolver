@@ -72,8 +72,11 @@ class Board:
 
         return valid_positions
 
-    def copy(self):
+    def copy(self) -> Self:
         return Board(array=self.__array.copy())
+
+    def get_dimension(self) -> int:
+        return self.__dimension
 
     def __initialize_board(self) -> list[list[int]]:
         board = np.array(list(range(self.__dimension ** 2)))
