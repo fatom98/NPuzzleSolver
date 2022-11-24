@@ -1,4 +1,4 @@
-Execution time is:  1541.18s.
+Execution time is:  1969.70s.
 
 It took 61866 steps to reach to target.
 
